@@ -91,16 +91,16 @@ function sketch(p5) {
 
         // A sample rendering logic demostration
         renderTestLogic() {
-            // console.log(ansList);
-            p5.tint(100, ansList[0] * 50, 0);
+            console.log(ansList);
+            p5.tint(200, ansList[0] * 50, 0);
             this.parts.outer_main[0].show();
-            p5.tint(100, ansList[1] * 50, 0);
+            p5.tint(200, ansList[1] * 50, 0);
             this.parts.inner_main.top[0].show();
-            p5.tint(100, ansList[2] * 50, 0);
+            p5.tint(200, ansList[2] * 50, 0);
             this.parts.inner_main.bottom[1].show();
-            p5.tint(100, ansList[3] * 50, 0);
+            p5.tint(200, ansList[3] * 50, 0);
             this.parts.inner_main.bottom[0].show();
-            p5.tint(100, ansList[4] * 50, 0);
+            p5.tint(200, ansList[4] * 50, 0);
             this.parts.inner_main.middle[0].show();
             p5.noTint();
         }
@@ -154,13 +154,11 @@ function sketch(p5) {
             p5.background("pink");
             p5.translate(p5.width / 2, p5.height / 2);
 
-            p5.push();
             p5.scale(0.5);
             allPartsManager.showBase();
             allPartsManager.renderLogic();
             allPartsManager.renderTestLogic();
             p5.scale(2);
-            p5.pop();
 
             printReturnText();
             running = false;
@@ -197,11 +195,13 @@ function App() {
     // Call backs for question card ------------------------------
     const updateAnsArr = (cardId, ans) => {
         setAnswerArr((prevArr) => {
+            console.log(prevArr);
+            console.log(cardId - 1);
+
             prevArr[cardId - 1] = ans;
             return prevArr;
         });
     };
-
     const previousCB = (cardId, ans) => {
         updateAnsArr(cardId, ans);
         if (cardId > 1) {
@@ -233,22 +233,24 @@ function App() {
     // Main renderer
     return (
         <>
-            {/* P5 Canvas */}
-            <div className={`${!showp5 ? "hidden" : ""}`}>
-                <ReactP5Wrapper
-                    sketch={sketch}
-                    ansList={answerArr}
-                    goBack={() => {
-                        setShowp5(false);
-                        setAnswerArr([]);
-                    }}
-                    running={true}
-                />
-            </div>
-
-            {/* Question card */}
-            {!showp5 ? (
+            {showp5 ? (
                 <>
+                    {/* P5 Canvas */}
+                    <div className={`${!showp5 ? "hidden" : ""}`}>
+                        <ReactP5Wrapper
+                            sketch={sketch}
+                            ansList={answerArr}
+                            goBack={() => {
+                                setShowp5(false);
+                                setAnswerArr([]);
+                            }}
+                            running={true}
+                        />
+                    </div>
+                </>
+            ) : (
+                <>
+                    {/* Question card */}
                     <div className="flex w-screen h-screen">
                         <div className="stack m-auto ">
                             {questionListArr.map(([questionNumber, obj]) => {
@@ -269,7 +271,7 @@ function App() {
                         </div>
                     </div>
                 </>
-            ) : null}
+            )}
         </>
     );
 }
