@@ -91,7 +91,6 @@ function sketch(p5) {
 
         // A sample rendering logic demostration
         renderTestLogic() {
-            console.log(ansList);
             p5.tint(200, ansList[0] * 50, 0);
             this.parts.outer_main[0].show();
             p5.tint(200, ansList[1] * 50, 0);
@@ -142,10 +141,6 @@ function sketch(p5) {
     p5.setup = () => {
         p5.createCanvas(p5.windowWidth, p5.windowHeight);
         p5.background("pink");
-        // p5.translate(p5.width / 2, p5.height / 2);
-        // p5.scale(1, -1);
-        // p5.scale(0.5);
-        // console.log(imageBankList);
     };
 
     // Draw function (Main loop)
@@ -195,9 +190,6 @@ function App() {
     // Call backs for question card ------------------------------
     const updateAnsArr = (cardId, ans) => {
         setAnswerArr((prevArr) => {
-            console.log(prevArr);
-            console.log(cardId - 1);
-
             prevArr[cardId - 1] = ans;
             return prevArr;
         });
