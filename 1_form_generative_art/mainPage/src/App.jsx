@@ -125,7 +125,7 @@ function sketch(p5) {
         allPartsManager = new Parts();
     };
 
-    // exit when press 'q' on keyboard
+    // exit when press 'q' on keyboard or click in screen
     p5.keyPressed = () => {
         if (p5.key === "q") {
             running = false;
@@ -134,14 +134,17 @@ function sketch(p5) {
         // Uncomment to prevent any default behavior.
         return false;
     };
+    p5.touchStarted = () => {
+        goBack();
+    };
 
     // Setup function
     p5.setup = () => {
         p5.createCanvas(p5.windowWidth, p5.windowHeight);
         p5.background("pink");
-        p5.translate(p5.width / 2, p5.height / 2);
-        p5.scale(1, -1);
-
+        // p5.translate(p5.width / 2, p5.height / 2);
+        // p5.scale(1, -1);
+        // p5.scale(0.5);
         // console.log(imageBankList);
     };
 
@@ -151,9 +154,13 @@ function sketch(p5) {
             p5.background("pink");
             p5.translate(p5.width / 2, p5.height / 2);
 
+            p5.push();
+            p5.scale(0.5);
             allPartsManager.showBase();
             allPartsManager.renderLogic();
             allPartsManager.renderTestLogic();
+            p5.scale(2);
+            p5.pop();
 
             printReturnText();
             running = false;
