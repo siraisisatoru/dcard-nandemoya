@@ -1,0 +1,64 @@
+{
+    "inner_main": {
+        "bottom": {
+            "1": {
+                "fileUrl": "img_bank/inner_main/bottom/HessianPants.png",
+                "x": -10,
+                "y": 180,
+                "z_indx": 0,
+                "zoom_lv": 8
+            },
+            "2": {
+                "fileUrl": "img_bank/inner_main/bottom/HessionBoots.png",
+                "x": -10,
+                "y": 320,
+                "z_indx": 0,
+                "zoom_lv": 6.5
+            }
+        },
+        "middle": {
+            "1": {
+                "fileUrl": "img_bank/inner_main/middle/HessionUpperGarments.png",
+                "x": -10,
+                "y": -45,
+                "z_indx": 0,
+                "zoom_lv": 9
+            }
+        },
+        "top": {
+            "1": {
+                "fileUrl": "img_bank/inner_main/top/HessionHelmet.png",
+                "x": -10,
+                "y": -400,
+                "z_indx": 0,
+                "zoom_lv": 9
+            }
+        }
+    },
+    "outer_main": {
+        "1": {
+            "fileUrl": "img_bank/outer_main/knife.png",
+            "x": 160,
+            "y": -20,
+            "z_indx": 0,
+            "zoom_lv": 5
+        },
+        "2": {
+            "fileUrl": "img_bank/outer_main/sword.png",
+            "x": 0,
+            "y": 0,
+            "z_indx": 0,
+            "zoom_lv": 1
+        }
+    },
+
+    "base": {
+        "1": {
+            "fileUrl": "img_bank/base/base.png",
+            "x": 0,
+            "y": 0,
+            "z_indx": 0,
+            "zoom_lv": 3
+        }
+    }
+}

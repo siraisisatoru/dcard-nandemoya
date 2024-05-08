@@ -1,0 +1,64 @@
+{
+    "1": {
+        "question": "How old are you?",
+        "options": ["6-10", "11-15", "16-20", "21-25", "26-30", "31-35", "36-40", ">41"],
+        "imgUrl": "https://picsum.photos/id/10/200/300",
+        "type": "MC"
+    },
+    "2": {
+        "question": "What is your gender?",
+        "options": ["Male", "Female", "Other", "Prefer not to tell"],
+        "type": "MC",
+        "imgUrl": "https://picsum.photos/id/11/200/300"
+    },
+    "3": {
+        "question": "How would you rate your experience?",
+        "options": ["Poor", "Fair", "Average", "Good", "Excellent"],
+        "type": "MC",
+        "imgUrl": "https://picsum.photos/id/12/200/300"
+    },
+    "4": {
+        "question": "On a scale of 1 to 10, how likely are you to recommend us to a friend or colleague?",
+        "type": "rating",
+        "step": 1,
+        "range": [1, 10],
+        "imgUrl": "https://picsum.photos/id/13/200/300"
+    },
+    "5": {
+        "question": "How satisfied are you with our service?",
+        "options": ["Very Unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+        "type": "MC",
+        "imgUrl": "https://picsum.photos/id/14/200/300"
+    },
+    "6": {
+        "question": "How often do you use our product?",
+        "options": ["Never", "Rarely", "Sometimes", "Often", "Always"],
+        "type": "MC",
+        "imgUrl": "https://picsum.photos/id/15/200/300"
+    },
+    "7": {
+        "question": "What is your favorite color?",
+        "options": ["Red", "Blue", "Green", "Yellow", "Purple"],
+        "type": "MC",
+        "imgUrl": "https://picsum.photos/id/16/200/300"
+    },
+    "8": {
+        "question": "How much do you agree with the following statement: 'Our product is easy to use'?",
+        "options": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "type": "MC",
+        "imgUrl": "https://picsum.photos/id/17/200/300"
+    },
+    "9": {
+        "question": "On a scale of 1 to 5, how satisfied are you with the cleanliness of our facility?",
+        "type": "rating",
+        "step": 1,
+        "range": [1, 5],
+        "imgUrl": "https://picsum.photos/id/18/200/300"
+    },
+    "10": {
+        "question": "How often do you exercise?",
+        "options": ["Never", "Rarely", "Sometimes", "Often", "Daily"],
+        "type": "MC",
+        "imgUrl": "https://picsum.photos/id/19/200/300"
+    }
+}
